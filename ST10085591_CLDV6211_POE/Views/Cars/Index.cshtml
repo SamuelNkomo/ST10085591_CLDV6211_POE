@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ST10085591_CLDV6211_POE.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cars for rent</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarMake)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BodyType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KilometersTravelled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceKilometers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Availabile)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarMake)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BodyType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KilometersTravelled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceKilometers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Availabile)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

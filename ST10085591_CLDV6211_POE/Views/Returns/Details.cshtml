@@ -1,0 +1,66 @@
+﻿@model ST10085591_CLDV6211_POE.Models.Return
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Return</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CarNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriverName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InspectorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InspectorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ElapsedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElapsedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fine)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
